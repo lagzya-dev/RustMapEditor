@@ -6,6 +6,10 @@
 ### Installation 
 https://github.com/Adsito/RustMapEditor/wiki/Installation
 
+### Video
+
+https://jumpshare.com/s/DrMqjcNVYICCqjRzXeVJ
+
 ### Contribute
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/RustMapMaking/Editor/issues)
