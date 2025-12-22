@@ -1,0 +1,66 @@
+﻿{
+    "rootName": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+    "root": {
+        "name": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab",
+        "localPosition": {
+            "x": 76.86102294921875,
+            "y": 3.3440001010894777,
+            "z": 165.77374267578126
+        },
+        "localRotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+        },
+        "localScale": {
+            "x": 1.0,
+            "y": 0.1044899970293045,
+            "z": 1.0
+        },
+        "children": [
+            {
+                "name": "assets/prefabs/deployable/large wood storage/box.wooden.large.prefab (1)",
+                "localPosition": {
+                    "x": -0.95098876953125,
+                    "y": 8.957782745361329,
+                    "z": 0.0
+                },
+                "localRotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.706845760345459,
+                    "w": 0.7073677778244019
+                },
+                "localScale": {
+                    "x": 9.570250511169434,
+                    "y": 0.10449004918336868,
+                    "z": 1.0
+                },
+                "children": []
+            },
+            {
+                "name": "assets/prefabs/deployable/signs/sign.pictureframe.xl.prefab",
+                "localPosition": {
+                    "x": 0.31500244140625,
+                    "y": 0.9763069152832031,
+                    "z": -0.19873046875
+                },
+                "localRotation": {
+                    "x": 0.7071068286895752,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 0.7071068286895752
+                },
+                "localScale": {
+                    "x": 0.14271999895572663,
+                    "y": 0.14271999895572663,
+                    "z": 1.3658722639083863
+                },
+                "children": []
+            }
+        ]
+    },
+    "unityVersion": "2022.3.62f2",
+    "exportedAt": "2025-12-22T01:45:05Z"
+}
