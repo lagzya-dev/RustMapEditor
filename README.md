@@ -5,7 +5,7 @@
 
 ### Installation 
 https://github.com/Adsito/RustMapEditor/wiki/Installation
-
+Unity 2022.3.62f2
 ### Video
 
 https://www.dropbox.com/scl/fi/vroqnkskqpvndi6zx3qav/Desktop-2025.12.22-07.04.37.17-1.mp4?rlkey=jrxpgwoomjh68b4308u5qx9vd&st=b4s77kgt&dl=0
