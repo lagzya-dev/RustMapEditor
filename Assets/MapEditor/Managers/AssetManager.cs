@@ -279,10 +279,10 @@ public static class AssetManager
 
 			// Load scene manifest for scene-based prefab loading
 			LoadSceneManifest();
-			/*foreach (var manifestScene in SceneAssetManager.Manifest.Scenes)
+			foreach (var manifestScene in SceneAssetManager.Manifest.Scenes)
 			{
 				yield return SceneAssetManager.LoadSceneAdditive(manifestScene.Name);
-			}*/
+			}
 			IsInitialised = true; IsInitialising = false;
 			SetVolumeGizmos();
 			Callbacks.OnBundlesLoaded();
