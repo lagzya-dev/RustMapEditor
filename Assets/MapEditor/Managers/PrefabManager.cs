@@ -102,7 +102,7 @@ public static class PrefabManager
   /// <param name="filePath">Asset filepath of the gameobject, used to get and set the PrefabID.</param>
   public static GameObject Setup(GameObject go, string filePath)
   {
-    UnityEngine.Object.DestroyImmediate(go.GetComponent<RigidBody>());
+    UnityEngine.Object.DestroyImmediate(go.GetComponent<Rigidbody>());
     go.SetLayerRecursively(8);
     go.SetTagRecursively("Untagged");
     go.SetStaticRecursively(false);
