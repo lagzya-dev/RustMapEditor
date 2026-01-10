@@ -60,7 +60,7 @@ public static class HierarchyJsonExporterMenu
     {
       name = t.name,
       localPosition = new Vector3Data(parent == null ? new Vector3() : parent.transform.InverseTransformPoint(t.position)),
-      localRotation = new QuaternionData(parent == null ? t.rotation : Quaternion.Euler(t.rotation.eulerAngles - parent.rotation.eulerAngles)),
+      localRotation = new QuaternionData(parent == null ? t.rotation : Quaternion.Inverse(parent.rotation) * t.rotation),
       localScale = new Vector3Data(t.localScale),
     };
 
