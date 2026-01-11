@@ -12,6 +12,7 @@ public static class HierarchyJsonExporterMenu
   private class TransformData
   {
     public string name;
+    public uint id;
     public Vector3Data localPosition;
     public QuaternionData localRotation;
     public Vector3Data localScale;
@@ -36,6 +37,7 @@ public static class HierarchyJsonExporterMenu
   private class ExportRoot
   {
     public string rootName;
+    public uint id;
     public TransformData root;
     public string unityVersion;
     public string exportedAt;
@@ -57,7 +59,8 @@ public static class HierarchyJsonExporterMenu
 
     var node = new TransformData
     {
-      name = t.name,
+      name = t.GetComponent<PrefabDataHolder>() ? AssetManager.ToPath(t.GetComponent<PrefabDataHolder>().prefabData.id) : t.name,
+      id = t.GetComponent<PrefabDataHolder>()?.prefabData.id ?? 0,
       localPosition = new Vector3Data(parent == null ? new Vector3() : parent.transform.InverseTransformPoint(t.position)),
       localRotation = new QuaternionData(parent == null ? t.rotation : Quaternion.Inverse(parent.rotation) * t.rotation),
       localScale = new Vector3Data(t.localScale),

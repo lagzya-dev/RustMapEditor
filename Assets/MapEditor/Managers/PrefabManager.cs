@@ -102,6 +102,7 @@ public static class PrefabManager
   /// <param name="filePath">Asset filepath of the gameobject, used to get and set the PrefabID.</param>
   public static GameObject Setup(GameObject go, string filePath)
   {
+    Debug.Log(go.name + " = " + filePath);
     UnityEngine.Object.DestroyImmediate(go.GetComponent<Rigidbody>());
     go.SetLayerRecursively(8);
     go.SetTagRecursively("Untagged");
@@ -133,7 +134,7 @@ public static class PrefabManager
     }
 
     PrefabDataHolder prefabDataHolder = go.AddComponent<PrefabDataHolder>();
-    prefabDataHolder.prefabData = new PrefabData() { id = AssetManager.ToID(filePath) };
+    prefabDataHolder.prefabData = new PrefabData() { id = AssetManager.ToID(filePath), prefab = filePath };
 
     go.SetActive(false);
     return go;
@@ -299,6 +300,7 @@ public static class PrefabManager
           sw.Restart();
         }
         prefabs[i].UpdatePrefabData();
+        prefabs[i].prefabData.prefab = AssetManager.ToPath(prefabs[i].prefabData.id);
         Spawn(Load(prefabs[i].prefabData.id), prefabs[i].prefabData, GetParent(prefabs[i].prefabData.category));
         GameObject.DestroyImmediate(prefabs[i].gameObject);
       }
@@ -322,6 +324,7 @@ public static class PrefabManager
           sw.Restart();
         }
         prefabs[i].UpdatePrefabData();
+        prefabs[i].prefabData.prefab = AssetManager.ToPath(prefabs[i].prefabData.id);
         Spawn(DefaultPrefab, prefabs[i].prefabData, GetParent(prefabs[i].prefabData.category));
         GameObject.DestroyImmediate(prefabs[i].gameObject);
       }
